@@ -1,9 +1,13 @@
 {
   "name": "medusa-file-azure-blob",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Azure Blob storage connector for Medusa",
   "author": "Artem Kovtun <theartemkovtun@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theartemkovtun/medusa-file-azure-blob"
+  },
   "keywords": [
     "medusa-plugin",
     "medusa-plugin-file",
