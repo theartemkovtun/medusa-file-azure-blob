@@ -1,23 +1,46 @@
-<p align="center">
-  <a href="https://www.medusa-commerce.com">
-    <img alt="Medusa" src="https://user-images.githubusercontent.com/7554214/129161578-19b83dc8-fac5-4520-bd48-53cba676edd2.png" width="100" />
-  </a>
-</p>
-<h1 align="center">
-  Medusa Azure Blob Plugin
-</h1>
+# Intro
 
-<p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Medusa is released under the MIT license." />
-  </a>
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
-  </a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
-</p>
+Store uploaded files to your Medusa backend on Azure Blob Storage.
+
+[Medusa Website](https://medusajs.com) | [Plugin Repository](https://github.com/theartemkovtun/medusa-file-azure-blob)
+
+---
+
+## Prerequisites
+
+- [Medusa backend](https://docs.medusajs.com/development/backend/install)
+- [Azure Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs)
+
+---
+
+## How to Install
+
+1\. Run the following command in the directory of the Medusa backend:
+
+```bash
+npm install medusa-file-azure-blob
+```
+
+2\. Set the following environment variables in `.env`:
+
+```bash
+ACCOUNT_NAME=<YOUR_STORAGE_NAME>
+ACCOUNT_KEY=<YOUR_STORAGE_KEY>
+CONTAINER=<YOUR_CONTAINER_NAME>
+```
+
+3\. In `medusa-config.js` add the following at the end of the `plugins` array:
+
+```js
+const plugins = [
+  // ...
+  {
+    resolve: `medusa-file-azure-blob',
+    options: {
+        account_name: process.env.ACCOUNT_NAME,
+        account_key: process.env.ACCOUNT_KEY,
+        container: process.env.CONTAINER
+    },
+  },
+]
+```
