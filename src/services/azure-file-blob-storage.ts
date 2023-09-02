@@ -1,7 +1,7 @@
 import { AbstractFileService } from "@medusajs/medusa"
-import * as fs from "fs";
+import fs from "fs";
 import { parse } from "path"
-import * as stream from "stream"
+import stream from "stream"
 import {
   DeleteFileType,
   FileServiceGetUploadStreamResult,
@@ -26,8 +26,8 @@ class AzureBlobStorageFileService extends AbstractFileService {
     constructor({}, options) {
         super({}, options)
     
-        this._account_name = options.account_name ?? 'cailmsstorage';
-        this._account_key = options.account_key ?? '0b57O6nyEmZJzaT2S7ef7WZX6G4yAE/R7FRc8jrYy3XfWM5GY1zUEYqfU8xxffMCkkzrj4IR/HKw+AStUB8oJw==';
+        this._account_name = options.account_name;
+        this._account_key = options.account_key;
         this._container = options.container ?? 'medusa-files';
 
         this._baseUrl = `https://${this._account_name}.blob.core.windows.net`;
@@ -95,7 +95,7 @@ class AzureBlobStorageFileService extends AbstractFileService {
 
         const downloadResponse = await blockBlobClient.download();
 
-        return downloadResponse.readableStreamBody;
+        return downloadResponse.readableStreamBody!;
     }
       
     async getPresignedDownloadUrl(file: GetUploadedFileType): Promise<string> {
