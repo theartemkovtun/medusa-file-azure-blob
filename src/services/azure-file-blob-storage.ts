@@ -16,6 +16,8 @@ import {
 
 class AzureBlobStorageFileService extends AbstractFileService {
 
+    private _DEFAULT_CONTAINER_NAME = 'medusa-files';
+
     private _account_name: string;
     private _account_key: string;
     private _container: string;
@@ -28,7 +30,7 @@ class AzureBlobStorageFileService extends AbstractFileService {
     
         this._account_name = options.account_name;
         this._account_key = options.account_key;
-        this._container = options.container ?? 'medusa-files';
+        this._container = (options.container ?? this._DEFAULT_CONTAINER_NAME).toLowerCase();
 
         this._baseUrl = `https://${this._account_name}.blob.core.windows.net`;
         this._shared_key_credential = new StorageSharedKeyCredential(
