@@ -1,17 +1,37 @@
-# Intro
+<p align="center">
+  <a href="https://www.medusajs.com">
+    <img alt="Medusa" src="https://thehub-io.imgix.net/files/s3/20220829133004-0996b04d6c303a7a3292e8ce5859368a.png?fit=crop&w=300&h=300&auto=format&q=60" width="100" />
+  </a>
+  <a href="https://www.medusajs.com">
+    <img alt="Azure" src="https://arunpotti.files.wordpress.com/2021/12/microsoft_azure.svg_.png" width="100" />
+  </a>
+</p>
+<h1 align="center">
+  Azure Blob Storage Medusa File
+</h1>
 
-Store uploaded files to your Medusa backend on Azure Blob Storage.
+<h4 align="center">
+  <a href="https://www.medusajs.com" target="_blank">Medusa Website</a> |
+  <a href="https://github.com/theartemkovtun/medusa-file-azure-blob" target="_blank">Plugin Repository</a>
+</h4>
 
-[Medusa Website](https://medusajs.com) | [Plugin Repository](https://github.com/theartemkovtun/medusa-file-azure-blob)
-
----
-
-## Prerequisites
-
-- [Medusa backend](https://docs.medusajs.com/development/backend/install)
-- [Azure Blob Storage](https://azure.microsoft.com/en-us/products/storage/blobs)
-
----
+<p align="center">
+    Store uploaded files to your Medusa backend on Azure blob storage 
+</p>
+<p align="center">
+  <a href="https://github.com/theartemkovtun/medusa-file-azure-blob/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Medusa is released under the MIT license." />
+  </a>
+  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md" target="_blank">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
+  </a>
+  <a href="https://discord.gg/xpCwq3Kfn8" target="_blank">
+    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
+  </a>
+  <a href="https://twitter.com/intent/follow?screen_name=medusajs" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
+  </a>
+</p>
 
 ## How to Install
 
@@ -44,3 +64,17 @@ const plugins = [
   },
 ]
 ```
+
+## Test the Plugin
+
+1\. Run the following command in the directory of the Medusa backend to run the backend:
+
+```bash
+npm run start
+```
+
+2\. Upload an image for a product using the admin dashboard or using [the Admin APIs](https://docs.medusajs.com/api/admin#tag/Upload).
+
+## License
+
+The Plugin is licensed under the [MIT License](https://github.com/theartemkovtun/medusa-file-azure-blob/blob/main/LICENSE).
