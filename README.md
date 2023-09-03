@@ -1,3 +1,5 @@
+&nbsp;
+
 <p align="center">
   <a href="https://www.medusajs.com">
     <img alt="Medusa" src="https://thehub-io.imgix.net/files/s3/20220829133004-0996b04d6c303a7a3292e8ce5859368a.png?fit=crop&w=300&h=300&auto=format&q=60" width="100" />
@@ -7,7 +9,7 @@
   </a>
 </p>
 <h1 align="center">
-  Azure Blob Storage Medusa File
+  Medusa Azure Storage File Plugin
 </h1>
 
 <h4 align="center">
@@ -16,7 +18,7 @@
 </h4>
 
 <p align="center">
-    Store uploaded files to your Medusa backend on Azure blob storage 
+    Store uploaded files to your Medusa backend on Azure Blob Storage 
 </p>
 <p align="center">
   <a href="https://github.com/theartemkovtun/medusa-file-azure-blob/blob/main/LICENSE" target="_blank">
@@ -44,8 +46,8 @@ npm install medusa-file-azure-blob
 2\. Set the following environment variables in `.env`:
 
 ```bash
-ACCOUNT_NAME=<YOUR_STORAGE_NAME>
-ACCOUNT_KEY=<YOUR_STORAGE_KEY>
+ACCOUNT_NAME=<YOUR_ACCOUNT_NAME>
+ACCOUNT_KEY=<YOUR_ACCOUNT_KEY>
 CONTAINER=<YOUR_CONTAINER_NAME>
 ```
 
@@ -65,9 +67,15 @@ const plugins = [
 ]
 ```
 
+## Account Name & Key
+
+You can get your storage account _Name & Key_ from <b>Access keys</b> menu section on **[Azure Portal](https://portal.azure.com)**
+
+<img src="https://i.ibb.co/fqGFtgM/1.png" width="600" alt="Follow @medusajs" />
+
 ## Test the Plugin
 
-1\. Run the following command in the directory of the Medusa backend to run the backend:
+1\. Run the following command in the directory of the Medusa backend to start the backend:
 
 ```bash
 npm run start
