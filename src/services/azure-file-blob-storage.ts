@@ -71,7 +71,7 @@ class AzureBlobStorageFileService extends AbstractFileService {
 
         const blockBlobClient = containerClient.getBlockBlobClient(fileData.fileKey)
 
-        blockBlobClient.deleteIfExists();
+        await blockBlobClient.deleteIfExists();
     }
 
     async getUploadStreamDescriptor(file: UploadStreamDescriptorType): Promise<FileServiceGetUploadStreamResult> {
